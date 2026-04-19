@@ -2,7 +2,7 @@ import { getCommands } from "../registry.js";
 import { CLICommand, State } from "../state.js";
 
 
-export function commandHelp(state: State) {
+export async function commandHelp(state: State): Promise<void> {
     console.log("Welcome to the Pokedex!")
     console.log("Usage:")
     for (const command in state.commandRegistry) {
